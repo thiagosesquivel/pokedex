@@ -15,6 +15,10 @@ export const Container = styled.div`
   justify-content: flex-start;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
   padding: 20px;
+  @media (max-width: 500px) {
+    width: 95vw;
+    height: 90vh;
+  }
 `;
 
 export const ListCart = styled.ul`
