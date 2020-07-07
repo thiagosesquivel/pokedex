@@ -18,6 +18,6 @@ export const Button = styled.button`
   }
 
   @media (max-width: 768px) {
-    width: 20%;
+    width: 35%;
   }
 `;
