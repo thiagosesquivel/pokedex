@@ -4,7 +4,7 @@ import { ModalContainer, CardModal, CloseButton } from "./styles";
 import { FaCheckCircle } from "react-icons/fa";
 import { useCart } from "../Context/Cart";
 
-function Modal({ closeModal }) {
+function Modal() {
   const { hideModal } = useCart();
   return (
     <>

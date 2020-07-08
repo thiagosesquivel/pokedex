@@ -8,6 +8,11 @@ export default function CartProvider({ children }) {
   const [totalQuantidade, setTotalQuantidade] = useState(0);
   const [message, setMessage] = useState();
   const [modalVisible, setModalVisible] = useState(false);
+  const [cartVisible, setCartVisible] = useState(false);
+
+  const handleCartVisible = () => {
+    setCartVisible(!cartVisible);
+  };
 
   function verifyAndAdd(item) {
     const index = cart.findIndex((c) => c.id === item.id);
@@ -33,6 +38,7 @@ export default function CartProvider({ children }) {
   function hideModal() {
     setModalVisible(false);
     clearCart();
+    handleCartVisible(false);
   }
 
   function clearMessage() {
@@ -92,6 +98,8 @@ export default function CartProvider({ children }) {
     modalVisible,
     showModal,
     hideModal,
+    cartVisible,
+    handleCartVisible,
   };
 
   return <CartContext.Provider value={store}>{children}</CartContext.Provider>;
@@ -114,6 +122,8 @@ export function useCart() {
     decrement,
     showModal,
     hideModal,
+    cartVisible,
+    handleCartVisible,
   } = context;
 
   return {
@@ -130,5 +140,7 @@ export function useCart() {
     decrement,
     showModal,
     hideModal,
+    cartVisible,
+    handleCartVisible,
   };
 }

@@ -17,6 +17,11 @@ export const Container = styled.div`
   font-size: 1.1rem;
   padding: 20px;
 
+  @media (max-width: 600px) {
+    max-width: 98%;
+    margin: auto;
+  }
+
   svg {
     font-size: 2rem;
   }

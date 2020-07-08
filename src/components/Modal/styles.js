@@ -24,6 +24,13 @@ export const CardModal = styled.div`
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   height: 300px;
+  text-align: center;
+
+  @media (max-width: 600px) {
+    width: 95%;
+    margin: 15% auto;
+    height: 70%;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -36,5 +43,12 @@ export const CloseButton = styled.button`
 
   &:hover {
     background: var(--vermelho2);
+  }
+
+  @media (max-width: 600px) {
+    width: 90%;
+    height: 50px;
+    font-size: 1.2rem;
+    margin: 20px auto;
   }
 `;

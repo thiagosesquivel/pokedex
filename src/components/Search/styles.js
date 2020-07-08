@@ -8,6 +8,9 @@ export const SearchInput = styled.input`
   padding: 10px;
   font-size: 16px;
   border-radius: 8px;
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const ButtonFilter = styled.button`

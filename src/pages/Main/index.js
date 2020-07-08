@@ -10,13 +10,8 @@ import Modal from "../../components/Modal";
 import { useCart } from "../../components/Context/Cart";
 
 function Main({ pokemons }) {
-  const { message, clearMessage, modalVisible } = useCart();
-  const [cartVisible, setCartVisible] = useState(false);
+  const { message, clearMessage, modalVisible, cartVisible } = useCart();
   const [searchArray, setSearchArray] = useState([]);
-
-  const handleCartVisible = () => {
-    setCartVisible(!cartVisible);
-  };
 
   const handleSearch = (event) => {
     const valor = event.target.value;
@@ -28,7 +23,7 @@ function Main({ pokemons }) {
 
   return (
     <>
-      <Header clickCart={handleCartVisible} />
+      <Header />
       {modalVisible && <Modal />}
       <Container>
         {cartVisible && <CartList />}

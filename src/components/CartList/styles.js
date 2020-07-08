@@ -30,6 +30,11 @@ export const ListCart = styled.ul`
   max-height: 60%;
   background: var(--branco);
   box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 600px) {
+    width: 95%;
+    padding: 10px;
+  }
 `;
 
 export const ItemCart = styled.li`
@@ -59,7 +64,9 @@ export const FinishButton = styled.button`
   padding: 10px;
   cursor: pointer;
   display: flex;
-  ${(props) => props.disabled && "cursor: not-allowed;"}
+  ${(props) =>
+    props.disabled &&
+    "cursor: not-allowed; background: var(--cinza); color: var(--preto);"}
   align-items: center;
   font-weight: bolder;
   border-radius: 8px;
@@ -72,10 +79,12 @@ export const FinishButton = styled.button`
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
   &:hover {
     background: var(--azul3);
+    ${(props) =>
+      props.disabled && "background: var(--cinza); color: var(--preto);"}
   }
 
   @media (max-width: 768px) {
-    width: 20%;
+    width: 90%;
   }
 `;
 export const Item = styled.li`
