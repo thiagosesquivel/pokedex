@@ -18,6 +18,10 @@ export const Button = styled.button`
   }
 
   @media (max-width: 768px) {
+    svg {
+      font-size: 1rem;
+    }
+
     width: 35%;
   }
 `;
